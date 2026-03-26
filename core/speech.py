@@ -17,17 +17,6 @@ def Translate_bengali_to_english(text):
     except:
         return text  # Return original text if translation fails
 
-def Translate_hindi_to_english(text):
-    """Translate Hindi text to English"""
-    try:
-        # Transliterate romanized Hindi to Devanagari script
-        hindi_script = sanscript.transliterate(text, sanscript.ITRANS, sanscript.DEVANAGARI)
-        # Translate from Hindi to English
-        english_text = translate(hindi_script, "en", "hi")
-        return english_text
-    except:
-        return text  # Return original text if translation fails
-
 def Speech_to_text_Python():
     recognizer = sr.Recognizer()
     recognizer.dynamic_energy_threshold = False
